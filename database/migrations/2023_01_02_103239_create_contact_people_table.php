@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('contact_people', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('branch_id')->constrained()->cascadeOnDelete();
+            $table->string('name');
+            $table->string('phone');
             $table->timestamps();
         });
     }

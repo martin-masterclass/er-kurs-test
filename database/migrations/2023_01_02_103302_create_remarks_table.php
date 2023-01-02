@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('remarks', function (Blueprint $table) {
             $table->id();
+            $table->integer('remarkable_id');
+            $table->string('remarkable_type');
+            $table->text('body');
             $table->timestamps();
         });
     }
