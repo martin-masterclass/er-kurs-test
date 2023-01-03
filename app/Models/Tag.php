@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
+    protected $guarded = ['id'];
+
+    public function companies()
+    {
+        return $this->belongsToMany(Company::class);
+    }
 }
