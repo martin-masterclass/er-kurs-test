@@ -20,4 +20,9 @@ class Document extends Model
         return $this->morphOne(Remark::class, 'remarkable');
     }
 
+    public function likes()
+    {
+        return $this->morphToMany(Like::class, 'likeable');
+    }
+
 }

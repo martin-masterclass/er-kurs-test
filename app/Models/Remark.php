@@ -14,4 +14,9 @@ class Remark extends Model
     {
         return $this->morphTo();
     }
+
+    public function likes()
+    {
+        return $this->morphToMany(Like::class, 'likeable');
+    }
 }
